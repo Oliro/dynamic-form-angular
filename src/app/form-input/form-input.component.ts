@@ -1,12 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-form-input',
   standalone: true,
-  imports: [],
+  imports: [ReactiveFormsModule],
   templateUrl: './form-input.component.html',
   styleUrl: './form-input.component.css'
 })
 export class FormInputComponent {
+  
+  @Input() input: any;
+  @Input() form!: FormGroup;
 
 }

@@ -1,1 +1,5 @@
-<p>form-input works!</p>
+<div [formGroup]="form" class="form-group" id="form">
+    <label [attr.for]="input.name">{{input.label}}</label>
+    <input class="form-control" [formControlName]="input.name" [id]="input.key" [type]="input.type">
+</div>
+

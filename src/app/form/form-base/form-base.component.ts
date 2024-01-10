@@ -1,6 +1,8 @@
 import { Component, Input, OnInit, inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+
 import { FormInputComponent } from '../form-input/form-input.component';
+import { FormType } from '../models/form-type';
 
 @Component({
   selector: 'app-form-base',
@@ -11,7 +13,7 @@ import { FormInputComponent } from '../form-input/form-input.component';
 })
 export class FormBaseComponent implements OnInit {
 
-  @Input() formFields: any[] = [];
+  @Input() formFields: FormType[] = [];
   form!: FormGroup;
   private formBuilder = inject(FormBuilder);
 
@@ -30,7 +32,7 @@ export class FormBaseComponent implements OnInit {
   }
 
   onSubmit() {
-console.log(this.form.value);
+    console.log(this.form.value);
   }
 
 }

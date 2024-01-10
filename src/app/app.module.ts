@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormBaseComponent } from './form-base/form-base.component';
+import { FormBaseComponent } from './form/form-base/form-base.component';
 
 @NgModule({
   declarations: [

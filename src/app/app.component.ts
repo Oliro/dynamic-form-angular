@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormType } from './form/models/form-type';
+
 
 @Component({
   selector: 'app-root',
@@ -8,8 +10,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'form_SOLID';
 
-  formFields: any[] = [
-    { id: 1, name: 'nome', label: 'Nome:', type: 'text' },
-    { id: 2, name: 'idade', label: 'Idade:', type: 'text' },
+  formFields: FormType[] = [
+    { id: 1, element: 'input', name: 'nome', label: 'Nome:', value:'', required:true, validator:'', type: 'text', class:'', optionsElement:[] },
+    { id: 2, element: 'input', name: 'idade', label: 'Idade:', value:'', required:true, validator:'', type: 'text', class:'', optionsElement:[]},
+    { id: 3, element: 'select', name: 'status', label: 'Idade:', value:'', required:true, validator:'', type: '', class:'', optionsElement: [{value: '1', name: 'Ativo'}, {value: '2', name: 'Pausado'}, {value: '2', name: 'Inativo'}]},
   ];
 }

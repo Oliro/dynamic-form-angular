@@ -1,0 +1,11 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    @for(formField of formFields; track formField.id){
+
+        <app-form-input [formField]="formField" [form]="form"></app-form-input>
+
+    }
+
+    <button type="submit">Cadastrar</button>
+
+</form>

@@ -1,0 +1,29 @@
+<div [formGroup]="form" id="form">
+
+    @switch (formField.element) {
+        @case ("input") {
+
+            <label [attr.for]="formField.name">{{formField.label}}</label>
+
+            <input [type]="formField.type" [id]="formField.name" [formControlName]="formField.name">
+
+        }
+        @case ("select") {
+
+            <label [attr.for]="formField.name">{{formField.label}}</label>
+
+            <select class="form-select" [id]="formField.name" [formControlName]="formField.name">
+
+                @for(options of formField.optionsElement; track formField.id){
+
+                    <option [value]="options.value">{{options.name}}</option>
+
+                }
+
+            </select>
+        }
+    }
+    
+</div>
+
+

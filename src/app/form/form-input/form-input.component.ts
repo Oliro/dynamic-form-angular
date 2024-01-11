@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { FormType } from '../models/form-type';
+import { FormConfig } from '../models/form-config';
+
 
 @Component({
   selector: 'app-form-input',
@@ -11,7 +12,7 @@ import { FormType } from '../models/form-type';
 })
 export class FormInputComponent {
 
-  @Input() formField!: FormType;
+  @Input() formField!: FormConfig;
   @Input() form!: FormGroup;
 
   

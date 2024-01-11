@@ -1,0 +1,76 @@
+[
+  {
+    "id": 1,
+    "element": "input",
+    "name": "nome",
+    "label": "Nome:",
+    "value": "",
+    "required": true,
+    "validator": "",
+    "type": "text",
+    "class": {
+      "label": "form-label",
+      "input": "form-control",
+      "size": "mb-3 col-md-6"
+    }
+  },
+  {
+    "id": 2,
+    "element": "input",
+    "name": "formacao",
+    "label": "Formação:",
+    "value": "",
+    "required": true,
+    "validator": "",
+    "type": "text",
+    "class": {
+      "label": "form-label",
+      "input": "form-control",
+      "size": "mb-3 col-md-4"
+    }
+  },
+  {
+    "id": 2,
+    "element": "input",
+    "name": "profissao",
+    "label": "Profissão:",
+    "value": "",
+    "required": true,
+    "validator": "",
+    "type": "text",
+    "class": {
+      "label": "form-label",
+      "input": "form-control",
+      "size": "mb-3 col-md-4"
+    }
+  },
+  {
+    "id": 3,
+    "element": "select",
+    "name": "status",
+    "label": "Status:",
+    "value": "",
+    "required": true,
+    "validator": "",
+    "class": {
+      "label": "form-label",
+      "input": "form-select",
+      "size": "mb-3 col-md-6"
+    },
+    "optionsElement": [
+      {
+        "value": "1",
+        "name": "Ativo"
+      },
+      {
+        "value": "2",
+        "name": "Pausado"
+      },
+      {
+        "value": "3",
+        "name": "Inativo"
+      }
+    ]
+  }
+
+]

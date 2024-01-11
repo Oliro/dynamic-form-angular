@@ -1,11 +1,18 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
 
-    @for(formField of formFields; track formField.id){
-
-        <app-form-input [formField]="formField" [form]="form"></app-form-input>
-
+    @for(formField of formFields$ | async; track formField.id){
+    <app-form-input [formField]="formField" [form]="form"></app-form-input>
     }
 
-    <button type="submit">Cadastrar</button>
+    <button class="btn btn-primary" type="submit">Cadastrar</button>
 
 </form>
+
+<hr class="mt-3">
+
+@if(showResult){
+    <h6>Resultado:</h6>
+    <span class="bg-success text-white p-2">
+         {{form.value | json}}
+    </span>
+}

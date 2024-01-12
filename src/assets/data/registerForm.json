@@ -3,7 +3,7 @@
     "id": 1,
     "element": "input",
     "name": "nome",
-    "label": "Nome:",
+    "label": "Nome",
     "value": "",
     "required": true,
     "validator": "",
@@ -11,14 +11,14 @@
     "class": {
       "label": "form-label",
       "input": "form-control",
-      "size": "mb-3 col-md-6"
+      "size": "mb-2 col-md-12"
     }
   },
   {
     "id": 2,
     "element": "input",
-    "name": "formacao",
-    "label": "Formação:",
+    "name": "projeto",
+    "label": "Projeto",
     "value": "",
     "required": true,
     "validator": "",
@@ -26,14 +26,14 @@
     "class": {
       "label": "form-label",
       "input": "form-control",
-      "size": "mb-3 col-md-4"
+      "size": "mb-2 col-md-8"
     }
   },
   {
     "id": 2,
     "element": "input",
-    "name": "profissao",
-    "label": "Profissão:",
+    "name": "especialidade",
+    "label": "Especialidade",
     "value": "",
     "required": true,
     "validator": "",
@@ -41,14 +41,14 @@
     "class": {
       "label": "form-label",
       "input": "form-control",
-      "size": "mb-3 col-md-4"
+      "size": "mb-2 col-md-8"
     }
   },
   {
     "id": 3,
     "element": "select",
-    "name": "status",
-    "label": "Status:",
+    "name": "senioridade",
+    "label": "Senioridade",
     "value": "",
     "required": true,
     "validator": "",
@@ -59,16 +59,44 @@
     },
     "optionsElement": [
       {
-        "value": "1",
-        "name": "Ativo"
+        "value": "Estagiário",
+        "name": "Estagiário"
       },
       {
-        "value": "2",
-        "name": "Pausado"
+        "value": "Júnior",
+        "name": "Júnior"
       },
       {
-        "value": "3",
-        "name": "Inativo"
+        "value": "Pleno",
+        "name": "Pleno"
+      },
+      {
+        "value": "Sênior",
+        "name": "Sênior"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "element": "select",
+    "name": "status",
+    "label": "Status",
+    "value": "",
+    "required": true,
+    "validator": "",
+    "class": {
+      "label": "form-label",
+      "input": "form-select",
+      "size": "mb-3 col-md-6"
+    },
+    "optionsElement": [
+      {
+        "value": "Disponivel",
+        "name": "Disponivel"
+      },
+      {
+        "value": "Engajado",
+        "name": "Engajado"
       }
     ]
   }

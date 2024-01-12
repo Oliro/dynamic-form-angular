@@ -4,15 +4,15 @@
 
         @case ("input") {
             <div [class]="formField.class.size">
-                <label [attr.for]="formField.name" [class]="formField.class.label">{{formField.label}}</label>
+                <label [attr.for]="formField.name" [class]="formField.class.label">{{formField.label + ':'}}</label>
 
                 <input [type]="formField.type" [class]="formField.class.input" [id]="formField.name"
-                    [formControlName]="formField.name" >
+                    [formControlName]="formField.name">
             </div>
         }
         @case ("select") {
             <div [class]="formField.class.size">
-                <label [attr.for]="formField.name" [class]="formField.class.label">{{formField.label}}</label>
+                <label [attr.for]="formField.name" [class]="formField.class.label">{{formField.label  + ':'}}</label>
                 <select [class]="formField.class.input" [id]="formField.name" [formControlName]="formField.name">
 
                     @for(options of formField.optionsElement; track formField.id){

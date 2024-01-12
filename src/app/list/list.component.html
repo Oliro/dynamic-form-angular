@@ -1,0 +1,27 @@
+<div class="table-responsive card">
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                @for (thTable of formFields$ | async; track $index) {
+
+                    <th scope="col" class="text-center">{{thTable.label}}</th>
+
+                }
+            </tr>
+        </thead>
+
+        <tbody>
+
+            @for (tdTable of registeredValue$ | async ; track $index) {
+                <tr>
+                    @for (iten of getObjectKeys(tdTable) ; track $index) {
+
+                        <td class="text-center">{{tdTable[iten]}}</td>
+                        
+                    }
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>

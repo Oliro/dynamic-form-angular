@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, inject } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 import { FormInputComponent } from '../form-input/form-input.component';
@@ -13,9 +13,10 @@ import { FormConfig } from '../models/form-config';
   templateUrl: './form-base.component.html',
   styleUrl: './form-base.component.css'
 })
-export class FormBaseComponent implements OnInit {
+export class FormBaseComponent<T> implements OnInit {
 
   @Input() public formFields$!: Observable<FormConfig[]>;
+  @Output() public registeredValue = new EventEmitter<T[]>();
 
   form!: FormGroup;
   private formBuilder = inject(FormBuilder);
@@ -41,8 +42,11 @@ export class FormBaseComponent implements OnInit {
   }
 
   onSubmit() {
+
     this.showResult = true;
-    console.log(this.form.value);
+
+    this.registeredValue.emit(this.form.value);
+
   }
 
 }

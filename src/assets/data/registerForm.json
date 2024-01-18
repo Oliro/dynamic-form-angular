@@ -91,14 +91,17 @@
     },
     "optionsElement": [
       {
-        "value": "Disponivel",
+        "value": "Disponivel*green",
         "name": "Disponivel"
       },
       {
-        "value": "Engajado",
+        "value": "Engajado*red",
         "name": "Engajado"
+      },
+      {
+        "value": "Negociar*yellow",
+        "name": "Negociar"
       }
     ]
   }
-
 ]

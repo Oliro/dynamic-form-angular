@@ -4,7 +4,9 @@
     <app-form-input [formField]="formField" [form]="form"></app-form-input>
     }
 
-    <button class="btn btn-primary" type="submit">Cadastrar</button>
+    <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Cadastrar</button>
+    <br>
+    <span class="small text-danger">*Preencha todos os campos.</span>
 
 </form>
 

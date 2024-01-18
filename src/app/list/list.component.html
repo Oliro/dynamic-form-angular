@@ -1,5 +1,5 @@
 <div class="table-responsive card">
-    <table class="table table-bordered table-striped">
+    <table class="table table-bordered table-striped table-dark">
         <thead class="table-dark">
             <tr>
                 @for (thTable of formFields$ | async; track $index) {
@@ -13,15 +13,31 @@
         <tbody>
 
             @for (tdTable of registeredValue$ | async ; track $index) {
-                <tr>
-                    @for (iten of getObjectKeys(tdTable) ; track $index) {
+            <tr>
+                @for (iten of getObjectKeys(tdTable) ; track $index) {
+
+                    @if (tdTable[iten].includes('*')) {
+
+                        <td class="text-center">
+                            <span class="badge bg-success" [ngClass]="{
+                                'bg-success': tdTable[iten].includes('*green'),
+                                'bg-warning': tdTable[iten].includes('*yellow'),
+                                'bg-danger': tdTable[iten].includes('*red')
+                            }">{{tdTable[iten].split('*')[0]}}</span>
+                        </td>
+
+                    }
+                    @else {
 
                         <td class="text-center">{{tdTable[iten]}}</td>
-                        
+
                     }
-                </tr>
+
+                }
+            </tr>
             }
 
         </tbody>
+        
     </table>
 </div>

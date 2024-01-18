@@ -1,0 +1,13 @@
+/* custom bootstrap 5 css */
+
+.table-dark {
+    --bs-table-color: #fff;
+    --bs-table-bg: #1A253F;
+    --bs-table-border-color: #4d5154;
+    --bs-table-striped-bg: #212D49;
+    --bs-table-striped-color: #fff;
+    --bs-table-active-bg: #373b3e;
+    --bs-table-active-color: #fff;
+    --bs-table-hover-bg: #323539;
+    --bs-table-hover-color: #fff;
+  }

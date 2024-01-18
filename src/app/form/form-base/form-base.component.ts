@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output, inject } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 import { FormInputComponent } from '../form-input/form-input.component';
 import { Observable, map } from 'rxjs';
@@ -34,7 +34,7 @@ export class FormBaseComponent<T> implements OnInit {
     this.formFields$.subscribe((result) => {
 
       result.forEach((input) => {
-        this.form.addControl(input.name, this.formBuilder.control(''));
+        this.form.addControl(input.name, this.formBuilder.control('', [Validators.required]));
       })
 
     })
@@ -43,9 +43,13 @@ export class FormBaseComponent<T> implements OnInit {
 
   onSubmit() {
 
-    this.showResult = true;
+    //this.showResult = true;
 
     this.registeredValue.emit(this.form.value);
+
+    setTimeout(() => {
+      this.form.reset();
+    }, 500);
 
   }
 
